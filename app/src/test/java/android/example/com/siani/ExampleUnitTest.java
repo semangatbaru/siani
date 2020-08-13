@@ -1,4 +1,4 @@
-package com.staydev.siani;
+package android.example.com.siani;
 
 import org.junit.Test;
 

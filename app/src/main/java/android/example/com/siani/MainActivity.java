@@ -1,10 +1,10 @@
-package com.staydev.siani;
+package android.example.com.siani;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,13 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
-
     public void Login(View view) {
-
-        Intent intent = new Intent(MainActivity.this, tahu.class);
+        Intent intent = new Intent(MainActivity.this, Beranda.class);
         startActivity(intent);
     }
 }
