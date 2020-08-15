@@ -40,10 +40,4 @@
             android:textColor="#9ACD32"
             android:textStyle="bold"></Button>
     </LinearLayout>
-
-
-
-
-
-
 </LinearLayout>
