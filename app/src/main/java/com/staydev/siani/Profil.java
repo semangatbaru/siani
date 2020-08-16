@@ -1,9 +1,16 @@
 package com.staydev.siani;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -19,6 +26,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class Profil extends AppCompatActivity {
+    ImageView imageView;
+    TextView name, email, id ;
+
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -57,6 +67,29 @@ public class Profil extends AppCompatActivity {
                 .build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+        TextView name = (TextView) navigationView.getHeaderView(0).findViewById(R.id.name);
+        TextView email = (TextView) navigationView.getHeaderView(0).findViewById(R.id.email);
+        ImageView imageView = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.imageView);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+            String personEmail = acct.getEmail();
+            String personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+            Log.d("info", personEmail);
+            Log.d("info", personName);
+
+//
+            name.setText(personName);
+            email.setText(personEmail);
+            Glide.with(this).load(String.valueOf(personPhoto)).into(imageView);
+
+
+
+        }
+
     }
 
     @Override
@@ -72,4 +105,5 @@ public class Profil extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }
