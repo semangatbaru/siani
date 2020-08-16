@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     void  SignInGoogle(){
 
 
-        Intent intent = new Intent(MainActivity.this, Beranda.class);
+        Intent intent = new Intent(MainActivity.this, Profil.class);
         startActivity(intent);
         finish();
 //        Intent signIntent = mGoogleSignInClient.getSignInIntent();
