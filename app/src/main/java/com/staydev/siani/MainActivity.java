@@ -48,8 +48,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void  SignInGoogle(){
-        Intent signIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signIntent,GOOGLE_SIGN);
+
+
+        Intent intent = new Intent(MainActivity.this, Beranda.class);
+        startActivity(intent);
+        finish();
+//        Intent signIntent = mGoogleSignInClient.getSignInIntent();
+//        startActivityForResult(signIntent,GOOGLE_SIGN);
     }
 
     @Override
@@ -86,5 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 
 }
