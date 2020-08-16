@@ -10,7 +10,7 @@
 
     <Button
         android:id="@+id/sewa"
-        android:layout_width="0dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="89dp"
         android:layout_marginLeft="89dp"
@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/map"
-        android:layout_width="0dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="89dp"
         android:layout_marginLeft="89dp"
@@ -44,7 +44,7 @@
 
     <Button
         android:id="@+id/chat"
-        android:layout_width="0dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="123dp"
         android:layout_marginRight="123dp"
@@ -57,7 +57,7 @@
 
     <Button
         android:id="@+id/kritik"
-        android:layout_width="0dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="123dp"
         android:layout_marginRight="123dp"
@@ -68,24 +68,26 @@
 
     </Button>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="90dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+    <Button
+        android:id="@+id/login"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="#000080"
+        android:text="Layanan"
+        android:textAllCaps="false"
+        android:textColor="#F0F8FF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </ImageView>
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"></Button>
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -94,6 +96,21 @@
         app:layout_constraintBottom_toTopOf="@+id/sewa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
 
