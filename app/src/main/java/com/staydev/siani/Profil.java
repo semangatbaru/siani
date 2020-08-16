@@ -1,21 +1,29 @@
 package com.staydev.siani;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -28,6 +36,7 @@ import androidx.appcompat.widget.Toolbar;
 public class Profil extends AppCompatActivity {
     ImageView imageView;
     TextView name, email, id ;
+    GoogleSignInClient mGoogleSignInClient;
 
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -86,7 +95,10 @@ public class Profil extends AppCompatActivity {
             email.setText(personEmail);
             Glide.with(this).load(String.valueOf(personPhoto)).into(imageView);
 
-
+            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestEmail()
+                    .build();
+            mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         }
 
@@ -98,6 +110,25 @@ public class Profil extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.profil, menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                mGoogleSignInClient.signOut()
+                        .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Intent intent = new  Intent (Profil.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+        }
+        return true;
+    }
+
 
     @Override
     public boolean onSupportNavigateUp() {

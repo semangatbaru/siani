@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new  Intent (MainActivity.this, Profil.class);
             startActivity(intent);
+            finish();
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
