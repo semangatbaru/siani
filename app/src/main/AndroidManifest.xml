@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/seanii"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tampil"></activity>
+        <activity android:name=".Kritik"></activity>
+        <activity
+            android:name=".Chat"
+            android:label="@string/title_activity_chat" />
+        <activity android:name=".Sewa" />
+        <activity android:name=".tampil" />
         <activity
             android:name=".Profil"
             android:label="@string/title_activity_profil"

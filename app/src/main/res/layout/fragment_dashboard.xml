@@ -1,22 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
-
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="6dp"
+        android:layout_weight="1"
+        android:background="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="221dp"
+        android:layout_marginRight="221dp"
+        android:layout_marginBottom="418dp"
+        android:background="#A9A9A9">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="34dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginRight="337dp"
+        android:layout_marginBottom="545dp"
+        android:text="Nama"
+        android:textColor="#DC143C"
+        android:textSize="10dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="417dp"
+        android:background="#A9A9A9">
+
+    </ImageView>
+
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="21dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="212dp"
+        android:layout_marginLeft="213dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="134dp"
+        android:layout_marginBottom="545dp"
+        android:text="Nama"
+        android:textColor="#DC143C"
+        android:textSize="10dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="309dp"
+        android:layout_marginEnd="221dp"
+        android:layout_marginRight="221dp"
+        android:layout_marginBottom="200dp"
+        android:background="#A9A9A9">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="47dp"
+        android:layout_height="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginRight="312dp"
+        android:layout_marginBottom="324dp"
+        android:text="Nama3"
+        android:textColor="#DC143C"
+        android:textSize="10dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="309dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="200dp"
+        android:background="#A9A9A9">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="34dp"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="212dp"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="141dp"
+        android:layout_marginBottom="324dp"
+        android:text="Nama"
+        android:textColor="#DC143C"
+        android:textSize="10dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+</RelativeLayout>

@@ -1,176 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#749d0d"
     tools:context=".ui.home.HomeFragment">
 
-
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="400dp"
-        android:layout_height="365dp"
-        android:layout_weight="1"
-        android:background="#fff"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:background="#749d0d"
+        android:layout_height="50dp">
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bagroundputih"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gambar"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"></androidx.appcompat.widget.AppCompatImageView>
+
 
         <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/bg"
-            android:elevation="4dp"
-            android:padding="30dp">
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="280dp">
+
+            <AutoCompleteTextView
+                android:textColor="#fff"
+                android:paddingLeft="20dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="10dp"
+                android:background="#005380"
+                android:text="Layanan"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                tools:ignore="RtlCompat"></AutoCompleteTextView>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="80dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/sewa"
+                tools:ignore="RtlCompat"></androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="180dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/kritik"
+                tools:ignore="RtlCompat"></androidx.appcompat.widget.AppCompatImageButton>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="80dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/chat"
+                tools:ignore="RtlCompat"></androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="180dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/map"
+                tools:ignore="RtlCompat"></androidx.appcompat.widget.AppCompatImageButton>
 
 
         </RelativeLayout>
     </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/linearLayout4"
-        android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:layout_marginBottom="6dp"
-        android:layout_weight="1"
-        android:background="#FFF"
-        app:layout_constraintBottom_toTopOf="@+id/text_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </LinearLayout>
-    <ImageView
-        android:foregroundGravity="center"
-        android:id="@+id/imageView2"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="70dp"
-        android:src="@drawable/gambar"
-        app:layout_constraintBottom_toTopOf="@+id/sewa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-    </ImageView>
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginLeft="156dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </ImageView>
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="14dp"
-        android:background="#000080"
-        android:text="Layanan"
-        android:textAllCaps="false"
-        android:textColor="#F0F8FF"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
-
-
-    </Button>
-
-
-    <Button
-        android:id="@+id/sewa"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="43dp"
-        android:background="@drawable/sewa"
-        app:layout_constraintBottom_toTopOf="@+id/map"
-        app:layout_constraintEnd_toStartOf="@+id/chat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
-
-    </Button>
-    <Button
-        android:id="@+id/map"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginLeft="89dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginRight="59dp"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/map"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/kritik"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sewa">
-
-    </Button>
-    <Button
-        android:id="@+id/chat"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="123dp"
-        android:background="@drawable/chat"
-        app:layout_constraintBaseline_toBaselineOf="@+id/sewa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sewa">
-
-    </Button>
-    <Button
-        android:id="@+id/kritik"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="123dp"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/kritik"
-        app:layout_constraintBaseline_toBaselineOf="@+id/map"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/map">
-
-    </Button>
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="348dp"
-        android:gravity="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
